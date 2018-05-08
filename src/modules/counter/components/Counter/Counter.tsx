@@ -1,6 +1,6 @@
-import * as React from "react";
-import { CounterState } from "./module";
-import { ActionDispatcher } from "./Container";
+import * as React from 'react'
+import { CounterState } from '../../reducer'
+import { ActionDispatcher } from './index'
 
 interface Props {
   value: CounterState;
@@ -10,11 +10,11 @@ interface Props {
 export class Counter extends React.Component<Props, {}> {
   public increment = () => {
     this.props.actions.increment(3)
-  }
+  };
 
   public decrement = () => {
     this.props.actions.decrement(2)
-  }
+  };
 
   public render() {
     return (
